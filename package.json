@@ -1,0 +1,12 @@
+{
+  "name": "hassan-portfolio",
+  "version": "1.0.0",
+  "description": "Jayden Portfolio - Interactive High-Performance Developer & Designer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["portfolio", "gsap", "developer-portfolio", "designer-portfolio"],
+  "author": "",
+  "license": "ISC"
+}
