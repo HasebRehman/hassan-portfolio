@@ -1,0 +1,29 @@
+# Environment variables
+.env
+.env*.local
+.env.production
+
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production & Build outputs
+/build
+/dist
+.vercel
+.next/
+out/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor & OS files
+.DS_Store
+*.pem
+.vscode/

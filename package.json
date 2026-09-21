@@ -4,7 +4,8 @@
   "description": "Jayden Portfolio - Interactive High-Performance Developer & Designer Portfolio",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve ."
+    "dev": "node server.js",
+    "start": "node server.js"
   },
   "keywords": ["portfolio", "gsap", "developer-portfolio", "designer-portfolio"],
   "author": "",
