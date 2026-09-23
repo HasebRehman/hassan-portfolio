@@ -3920,7 +3920,7 @@ header .mobile-menu {
   z-index: 2;
   font-size: 84px;
   line-height: 1;
-  margin-bottom: -42px;
+  margin-bottom: -56px;
 }
 .cta .cta-infiniteslide {
   background: rgba(77, 77, 77, 0.2);
@@ -4552,7 +4552,7 @@ header .mobile-menu {
   }
   .cta .text-signature {
     font-size: 60px;
-    margin-bottom: -30px;
+    margin-bottom: -40px;
   }
   .cta .cta-infiniteslide {
     margin-top: 0;
