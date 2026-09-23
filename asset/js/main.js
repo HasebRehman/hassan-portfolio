@@ -363,8 +363,27 @@
         })
     }
 
+    // liveClock
+    var liveClock = function () {
+        var updateTime = function () {
+            var clockEl = document.getElementById("user-live-clock");
+            if (clockEl) {
+                var now = new Date();
+                var timeString = now.toLocaleTimeString('en-US', {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                });
+                clockEl.textContent = timeString;
+            }
+        };
+        updateTime();
+        setInterval(updateTime, 1000);
+    }
+
     // Dom Ready
     $(function () {
+        liveClock();
         animateText();
         tabs();
         ajaxContactForm();
