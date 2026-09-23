@@ -14,7 +14,7 @@
         "Other"
     ];
 
-    const WELCOME_TEXT = "Hi! I'm Hassan's assistant. Is there anything I can help you with today?";
+    const WELCOME_TEXT = "Hi! I'm Sara Hassan's assistant. Is there anything I can help you with today?";
 
     const FALLBACK_RESPONSES = {
         "Logo Design": "Hassan specializes in custom, memorable logo designs that capture your brand's essence. Could you share your business name and industry to begin?",
@@ -165,7 +165,7 @@
                 <div class="hassan-chat-messages" id="hassanChatMessages">
                     <!-- Welcome Bot Message -->
                     <div class="hassan-msg-row bot">
-                        <div class="hassan-msg-bot-avatar">AI</div>
+                        <div class="hassan-msg-bot-avatar">S</div>
                         <div class="hassan-msg-bubble">
                             <p>${WELCOME_TEXT}</p>
                             <span class="hassan-msg-timestamp">${formatCurrentTime()}</span>
@@ -347,7 +347,7 @@
 
             if (sender === "bot") {
                 row.innerHTML = `
-                    <div class="hassan-msg-bot-avatar">AI</div>
+                    <div class="hassan-msg-bot-avatar">S</div>
                     <div class="hassan-msg-bubble">
                         <p>${escapeHTML(text)}</p>
                         <span class="hassan-msg-timestamp">${formatCurrentTime()}</span>
@@ -371,7 +371,7 @@
             typingRow.className = "hassan-msg-row bot";
             typingRow.id = "hassanTypingIndicator";
             typingRow.innerHTML = `
-                <div class="hassan-msg-bot-avatar">AI</div>
+                <div class="hassan-msg-bot-avatar">S</div>
                 <div class="hassan-msg-bubble">
                     <div class="hassan-typing-indicator">
                         <span class="hassan-typing-dot"></span>

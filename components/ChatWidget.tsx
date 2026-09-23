@@ -467,7 +467,7 @@ export const ChatWidget: React.FC = () => {
               >
                 {msg.sender === "bot" && (
                   <div style={styles.botAvatarMini}>
-                    <span>AI</span>
+                    <span>S</span>
                   </div>
                 )}
                 <div
@@ -531,7 +531,7 @@ export const ChatWidget: React.FC = () => {
             {isLoading && (
               <div style={{ ...styles.messageRow, justifyContent: "flex-start" }}>
                 <div style={styles.botAvatarMini}>
-                  <span>AI</span>
+                  <span>S</span>
                 </div>
                 <div style={{ ...styles.messageBubble, ...styles.botBubble }}>
                   <div style={styles.typingDots}>
