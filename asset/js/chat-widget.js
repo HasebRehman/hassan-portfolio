@@ -130,7 +130,7 @@
 
         container.innerHTML = `
             <!-- Chat Panel -->
-            <div class="hassan-chat-panel" id="hassanChatPanel" role="dialog" aria-label="Hassan's Assistant Chat">
+            <div class="hassan-chat-panel" id="hassanChatPanel" role="dialog" aria-label="Sara - Hassan's Assistant Chat">
                 <!-- Header -->
                 <div class="hassan-chat-header">
                     <div class="hassan-chat-header-left">
@@ -147,7 +147,7 @@
                             <span class="hassan-chat-status-dot"></span>
                         </div>
                         <div class="hassan-chat-title-info">
-                            <h4>Hassan's Assistant</h4>
+                            <h4>Sara</h4>
                             <p><span class="dot"></span> Online • Ready to help</p>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                     <div class="hassan-chat-input-wrap">
                         <input type="text" class="hassan-chat-input" id="hassanChatInput" placeholder="Type your message..." autocomplete="off" />
                     </div>
-                    <button type="button" class="hassan-chat-mic-btn" id="hassanMicBtn" title="Voice Input (Speak to Hassan's Assistant)" aria-label="Voice Input">
+                    <button type="button" class="hassan-chat-mic-btn" id="hassanMicBtn" title="Voice Input (Speak to Sara)" aria-label="Voice Input">
                         🎤
                     </button>
                     <button type="button" class="hassan-chat-send-btn" id="hassanSendBtn" title="Send Message" aria-label="Send Message">
@@ -412,7 +412,7 @@
             isLoading = true;
             input.disabled = true;
             sendBtn.disabled = true;
-            input.placeholder = "Hassan's Assistant is typing...";
+            input.placeholder = "Sara is typing...";
 
             showTypingIndicator();
 

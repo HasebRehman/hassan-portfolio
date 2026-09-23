@@ -418,7 +418,7 @@ export const ChatWidget: React.FC = () => {
                 <span style={styles.onlineStatus} />
               </div>
               <div>
-                <h4 style={styles.headerTitle}>Hassan&apos;s Assistant</h4>
+                <h4 style={styles.headerTitle}>Sara</h4>
                 <p style={styles.headerSubtitle}>
                   <span style={styles.onlineDot} /> Online • Instant replies
                 </p>
