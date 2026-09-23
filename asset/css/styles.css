@@ -2021,35 +2021,39 @@ header .mobile-menu {
 }
 
 .gradient-icon-1 {
-  width: 118px;
-  height: 118px;
+  width: 96px;
+  height: 96px;
   -webkit-mask: url("../images/section/step1.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask: url("../images/section/step1.svg") no-repeat center;
+  mask-size: contain;
 }
 
 .gradient-icon-2 {
-  width: 112px;
-  height: 71px;
+  width: 96px;
+  height: 96px;
   -webkit-mask: url("../images/section/step2.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask: url("../images/section/step2.svg") no-repeat center;
+  mask-size: contain;
 }
 
 .gradient-icon-3 {
-  width: 74px;
-  height: 106px;
+  width: 96px;
+  height: 96px;
   -webkit-mask: url("../images/section/step3.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask: url("../images/section/step3.svg") no-repeat center;
+  mask-size: contain;
 }
 
 .gradient-icon-4 {
-  width: 89px;
-  height: 114px;
+  width: 96px;
+  height: 96px;
   -webkit-mask: url("../images/section/step4.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask: url("../images/section/step4.svg") no-repeat center;
+  mask-size: contain;
 }
 
 .gradient-icon {
