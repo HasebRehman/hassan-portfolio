@@ -774,13 +774,15 @@ a {
 
 .text-signature {
   font-family: 'Great Vibes', 'Alex Brush', cursive;
-  font-size: 64px;
-  line-height: 1.1;
+  font-size: 82px;
+  line-height: 1;
   letter-spacing: 0px;
   color: #ffffff;
   font-weight: 400;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
   user-select: none;
+  transform: rotate(-7deg);
+  display: inline-block;
 }
 
 /*------------ Components ---------------- */
@@ -2611,8 +2613,8 @@ header .mobile-menu {
   width: auto;
   position: relative;
   z-index: 2;
-  margin-top: 15px;
-  margin-bottom: -5px;
+  margin-top: 10px;
+  margin-bottom: -15px;
 }
 .left-sidebar .infor {
   margin-bottom: 32px;
@@ -4118,7 +4120,8 @@ header .mobile-menu {
     margin-bottom: -30px;
   }
   .left-sidebar .image .signature {
-    width: 150px;
+    width: auto;
+    font-size: 60px;
   }
   .left-sidebar .infor {
     margin-bottom: 23px;
@@ -4203,7 +4206,8 @@ header .mobile-menu {
     max-width: 320px;
   }
   .left-sidebar .image .signature {
-    width: 200px;
+    width: auto;
+    font-size: 70px;
   }
   .left-sidebar .social-links {
     margin-bottom: 30px;
