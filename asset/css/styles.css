@@ -1913,10 +1913,17 @@ header .mobile-menu {
   padding: 5px 24px;
   border-radius: 99px;
   background: rgba(37, 37, 37, 0.5019607843);
+  color: #fff;
   cursor: default;
   user-select: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.list-tags a:hover {
+.list-tags a:hover,
+.list-tags span:hover {
   background: #fff;
   color: #000;
 }
