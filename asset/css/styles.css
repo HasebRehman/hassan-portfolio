@@ -2824,7 +2824,7 @@ header .mobile-menu {
 }
 
 .indicators .list-tags {
-  max-width: 363px;
+  max-width: 100%;
   margin-bottom: 64px;
 }
 .indicators .indicators-wrap {
