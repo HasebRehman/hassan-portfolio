@@ -3918,8 +3918,9 @@ header .mobile-menu {
 .cta .text-signature {
   position: relative;
   z-index: 2;
-  font-size: 72px;
-  margin-bottom: -15px;
+  font-size: 84px;
+  line-height: 1;
+  margin-bottom: -42px;
 }
 .cta .cta-infiniteslide {
   background: rgba(77, 77, 77, 0.2);
@@ -3927,7 +3928,7 @@ header .mobile-menu {
   backdrop-filter: blur(20px);
   border-radius: 999px;
   padding: 87px 0 81px 0;
-  margin-top: -58px;
+  margin-top: 0;
   overflow: hidden;
 }
 
@@ -4549,8 +4550,12 @@ header .mobile-menu {
   .section-contact-inner .bot-btn > * {
     width: 100% !important;
   }
+  .cta .text-signature {
+    font-size: 60px;
+    margin-bottom: -30px;
+  }
   .cta .cta-infiniteslide {
-    margin-top: -25px;
+    margin-top: 0;
     padding: 40px 0;
   }
   .tf-footer.style-1 {
