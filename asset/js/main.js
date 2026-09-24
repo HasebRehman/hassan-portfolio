@@ -152,41 +152,71 @@
     var ajaxContactForm = function () {
         $('#form-contact').each(function () {
             $(this).validate({
+                rules: {
+                    mail: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                messages: {
+                    mail: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    message: {
+                        required: "Please write a message"
+                    }
+                },
                 submitHandler: function (form) {
-                    var $form = $(form),
-                        str = $form.serialize(),
-                        loading = $('<div />', { 'class': 'loading' });
+                    var $form = $(form);
+                    var submitBtn = $form.find('button[type="submit"]');
+                    var origBtnHtml = submitBtn.html();
+
+                    var payload = {
+                        mail: $('#mail').val(),
+                        phone: $('#phone').val(),
+                        message: $('#message').val(),
+                        budget: $('#form-budget').val() || '$500'
+                    };
+
+                    submitBtn.prop('disabled', true).html('<span class="font-poppins flex-grow-1 text-start">Sending...</span> <i class="icon icon-arrow-top-right"></i>');
+
+                    // Remove existing alert if any
+                    $form.find('.flat-alert').remove();
 
                     $.ajax({
                         type: "POST",
-                        url: $form.attr('action'),
-                        data: str,
-                        beforeSend: function () {
-                            $form.find('.send-wrap').append(loading);
-                        },
-                        success: function (msg) {
-                            var result, cls;
-                            if (msg === 'Success') {
-                                result = 'Message Sent Successfully To Email Administrator';
-                                cls = 'msg-success';
-                            } else {
-                                result = 'Error sending email.';
-                                cls = 'msg-error';
-                            }
-
+                        url: "/api/contact",
+                        contentType: "application/json",
+                        data: JSON.stringify(payload),
+                        success: function (data) {
                             $form.prepend(
-                                $('<div />', {
-                                    'class': 'flat-alert ' + cls,
-                                    'text': result
-                                }).append(
-                                    $('<a class="close d-flex" href="#"><i class="icon icon-times-solid"></i></a>')
-                                )
+                                $('<div class="flat-alert msg-success" style="padding: 12px 16px; margin-bottom: 20px; border-radius: 8px; background: rgba(37, 211, 102, 0.15); border: 1px solid #25D366; color: #25D366; font-size: 14px;">' +
+                                  'Thank you! Your message has been sent. A confirmation email has been sent to your inbox.' +
+                                  '</div>')
                             );
-
-                            $form.find(':input').not('.submit').val('');
+                            $form[0].reset();
+                            // Reset active budget
+                            $(".choose-item").removeClass("active");
+                            $(".choose-item").first().addClass("active");
+                            $("#form-budget").val($(".choose-item").first().text().trim());
                         },
-                        complete: function (xhr, status, error_thrown) {
-                            $form.find('.loading').remove();
+                        error: function (xhr) {
+                            var errMsg = "Failed to send message. Please try again or reach out directly on WhatsApp.";
+                            if (xhr.responseJSON && xhr.responseJSON.error) {
+                                errMsg = xhr.responseJSON.error;
+                            }
+                            $form.prepend(
+                                $('<div class="flat-alert msg-error" style="padding: 12px 16px; margin-bottom: 20px; border-radius: 8px; background: rgba(255, 77, 77, 0.15); border: 1px solid #ff4d4d; color: #ff4d4d; font-size: 14px;">' +
+                                  errMsg +
+                                  '</div>')
+                            );
+                        },
+                        complete: function () {
+                            submitBtn.prop('disabled', false).html(origBtnHtml);
                         }
                     });
                 }
@@ -352,6 +382,7 @@
         $(".choose-item").on("click", function () {
             $(this).closest(".list-choose").find(".choose-item").removeClass("active");
             $(this).addClass("active");
+            $("#form-budget").val($(this).text().trim());
         });
     }
 

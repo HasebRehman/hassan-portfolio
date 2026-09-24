@@ -130,16 +130,16 @@
                     <div class="heading text-body-1 dot-before">Social Network</div>
                     <ul class="social-links">
                         <li>
-                            <a href="#"><i class="icon icon-twitter-x"></i></a>
+                            <a href="https://www.behance.net/hassanrehman25" target="_blank" rel="noopener noreferrer"><i class="icon icon-behance"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon icon-dribbble"></i></a>
+                            <a href="https://www.linkedin.com/in/hassan-rehman-graphicdesigner" target="_blank" rel="noopener noreferrer"><i class="icon icon-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon icon-github"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="icon icon-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon icon-facebook-f"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -205,7 +205,7 @@
             <div class="heading">
                 <div class="box-status">
                     <div class="dot"></div>
-                    <div class="text-body-1">Available</div>
+                    <div class="text-body-1">Available for Work</div>
                 </div>
             </div>
             <div class="image">
@@ -216,24 +216,24 @@
                 <div class="text-signature signature">Hassan</div>
             </div>
             <div class="infor">
-                <h6 class="mail letter-spacing-0"><a href="mailto:hassanrehman5460@gmail.com">hassanrehman5460@gmail.com</a></h6>
+                <h6 class="mail letter-spacing-0">hassanrehman5890@gmail.com</h6>
                 <div class="text-body-2 address">Based in Lahore, PK</div>
             </div>
             <ul class="social-links justify-content-center">
                 <li>
-                    <a href="#"><i class="icon icon-twitter-x"></i></a>
+                    <a href="https://www.behance.net/hassanrehman25" target="_blank" rel="noopener noreferrer"><i class="icon icon-behance"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="icon icon-dribbble"></i></a>
+                    <a href="https://www.linkedin.com/in/hassan-rehman-graphicdesigner" target="_blank" rel="noopener noreferrer"><i class="icon icon-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon icon-github"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="icon icon-instagram"></i></a>
                 </li>
-                <li>
-                    <a href="#"><i class="icon icon-facebook-f"></i></a>
-                </li>
             </ul>
-            <a href="#contact" class="bot-button">
+            <a href="https://wa.me/923190117360" target="_blank" rel="noopener noreferrer" class="bot-button">
                 <div class="text-body-1 text">Get Started</div>
                 <i class="icon icon-arrow-top-right"></i>
             </a>
@@ -534,7 +534,7 @@
                                             <i class="icon icon-global"></i>
                                             Available to <span>Worldwide</span>
                                         </div>
-                                        <a class="text-body-1 link" href="#contact">
+                                        <a class="text-body-1 link" href="https://wa.me/923190117360" target="_blank" rel="noopener noreferrer">
                                             Contact me
                                             <i class="icon icon-arrow-top-right"></i>
                                         </a>
@@ -937,7 +937,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#contact" class="custom-quote fw-medium h3 wow fadeInUp" data-wow-delay="0.1s">
+                                <a href="https://wa.me/923190117360" target="_blank" rel="noopener noreferrer" class="custom-quote fw-medium h3 wow fadeInUp" data-wow-delay="0.1s">
                                     Custom Quote
                                     <i class="icon icon-arrow-top-right"></i>
                                 </a>
@@ -1011,7 +1011,7 @@
                                 </div>
                                 <div class="ask-me">
                                     <div class="text-body-2 fw-medium text">Do you have any other questions?</div>
-                                    <a href="#contact" class="text-body-2 fw-medium link">Ask me directly</a>
+                                    <a href="https://wa.me/923190117360" target="_blank" rel="noopener noreferrer" class="text-body-2 fw-medium link">Ask me directly</a>
                                 </div>
                             </div>  
                         </div>
@@ -1025,21 +1025,22 @@
                             <div class="offset-xxl-5 col-xxl-7 offset-xl-4 col-xl-7 offset-lg-2 col-lg-8">
                                 <div class="section-contact-inner">
                                     <h1 class="fw-medium heading">Contact For <br> Work</h1>
-                                    <form action="./asset/contact/contact-process.php" class="form-contact" id="form-contact" method="post">
+                                    <form action="/api/contact" class="form-contact" id="form-contact" method="post">
+                                        <input type="hidden" name="budget" id="form-budget" value="$500">
                                         <fieldset class="fiel-mail">
                                             <label class="text-xs-2">Your Email</label>
-                                            <input type="email" name="mail" id="mail" placeholder="Enter the Email" value="" aria-required="true" required>
+                                            <input type="email" name="mail" id="mail" placeholder="Enter your email" value="" aria-required="true" required>
                                         </fieldset>
                                         <fieldset class="fiel-phone">
-                                            <label class="text-xs-2">Your Phone</label>
-                                            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" value="" aria-required="true" required>
+                                            <label class="text-xs-2">Your Phone / WhatsApp</label>
+                                            <input type="text" name="phone" id="phone" placeholder="Enter your phone or WhatsApp number" value="">
                                         </fieldset>
                                         <fieldset class="fiel-text">
-                                            <label class="text-xs-2">Messenger</label>
-                                            <textarea placeholder="" aria-required="true" id="message" required name="message"></textarea>
+                                            <label class="text-xs-2">Message</label>
+                                            <textarea placeholder="Tell me about your project..." aria-required="true" id="message" required name="message"></textarea>
                                         </fieldset>
                                         <div class="pricing-list list-choose">
-                                            <div class="item text-body-2 choose-item font-poppins">$500</div>
+                                            <div class="item text-body-2 choose-item font-poppins active">$500</div>
                                             <div class="item text-body-2 choose-item font-poppins">$1,000</div>
                                             <div class="item text-body-2 choose-item font-poppins">$1,000 - $5,000</div>
                                         </div>
