@@ -500,9 +500,23 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-/* Remove chrome yellow autofill */
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
+/* Remove chrome autofill white/yellow background and maintain dark theme */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
 /* Reset search styling */

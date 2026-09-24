@@ -40,6 +40,7 @@
     transform: scale(0.95);
 }
 
+.hassan-chat-launcher .icon-avatar,
 .hassan-chat-launcher .icon-chat,
 .hassan-chat-launcher .icon-close {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,6 +50,38 @@
     justify-content: center;
 }
 
+.hassan-chat-launcher .icon-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hassan-chat-launcher .icon-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.hassan-chat-launcher .icon-chat {
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.hassan-chat-launcher:hover .icon-avatar {
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.hassan-chat-launcher:hover .icon-chat {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .hassan-chat-launcher .icon-close {
     opacity: 0;
     transform: rotate(-90deg) scale(0.5);
@@ -56,9 +89,22 @@
     font-weight: bold;
 }
 
+.hassan-chat-widget-container.active .hassan-chat-launcher .icon-avatar {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.hassan-chat-widget-container.active .hassan-chat-launcher:hover .icon-avatar {
+    opacity: 0;
+}
+
 .hassan-chat-widget-container.active .hassan-chat-launcher .icon-chat {
     opacity: 0;
-    transform: rotate(90deg) scale(0.5);
+    transform: scale(0.5);
+}
+
+.hassan-chat-widget-container.active .hassan-chat-launcher:hover .icon-chat {
+    opacity: 0;
 }
 
 .hassan-chat-widget-container.active .hassan-chat-launcher .icon-close {
@@ -323,7 +369,16 @@
     color: #FB8F10;
     flex-shrink: 0;
     margin-top: 2px;
+    overflow: hidden;
     font-family: "Rajdhani", sans-serif;
+}
+
+.hassan-msg-bot-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .hassan-msg-bubble {

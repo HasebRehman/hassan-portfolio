@@ -136,13 +136,7 @@
                     <div class="hassan-chat-header-left">
                         <div class="hassan-chat-avatar-wrap">
                             <div class="hassan-chat-avatar">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
-                                    <rect x="3" y="8" width="18" height="12" rx="4"/>
-                                    <circle cx="9" cy="13" r="1.5" fill="#fff"/>
-                                    <circle cx="15" cy="13" r="1.5" fill="#fff"/>
-                                    <path d="M9 17h6"/>
-                                </svg>
+                                <img src="asset/images/sara-avatar.svg" alt="Sara" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
                             </div>
                             <span class="hassan-chat-status-dot"></span>
                         </div>
@@ -165,7 +159,9 @@
                 <div class="hassan-chat-messages" id="hassanChatMessages">
                     <!-- Welcome Bot Message -->
                     <div class="hassan-msg-row bot">
-                        <div class="hassan-msg-bot-avatar">S</div>
+                        <div class="hassan-msg-bot-avatar">
+                            <img src="asset/images/sara-avatar.svg" alt="Sara" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+                        </div>
                         <div class="hassan-msg-bubble">
                             <p>${WELCOME_TEXT}</p>
                             <span class="hassan-msg-timestamp">${formatCurrentTime()}</span>
@@ -197,6 +193,9 @@
 
             <!-- Launcher Button -->
             <button type="button" class="hassan-chat-launcher" id="hassanChatLauncher" aria-label="Open Chat">
+                <span class="icon-avatar">
+                    <img src="asset/images/sara-avatar.svg" alt="Sara Assistant" />
+                </span>
                 <span class="icon-chat">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -347,7 +346,9 @@
 
             if (sender === "bot") {
                 row.innerHTML = `
-                    <div class="hassan-msg-bot-avatar">S</div>
+                    <div class="hassan-msg-bot-avatar">
+                        <img src="asset/images/sara-avatar.svg" alt="Sara" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+                    </div>
                     <div class="hassan-msg-bubble">
                         <p>${escapeHTML(text)}</p>
                         <span class="hassan-msg-timestamp">${formatCurrentTime()}</span>
