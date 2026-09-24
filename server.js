@@ -241,9 +241,16 @@ const server = http.createServer(async (req, res) => {
   }
 
   // Handle Static File Serving
+  let decodedPathname = pathname;
+  try {
+    decodedPathname = decodeURIComponent(pathname);
+  } catch (e) {
+    decodedPathname = pathname;
+  }
+
   let filePath = path.join(
     __dirname,
-    pathname === "/" ? "index.html" : pathname
+    decodedPathname === "/" ? "index.html" : decodedPathname
   );
 
   // Security: prevent directory traversal
