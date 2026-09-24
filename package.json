@@ -7,7 +7,15 @@
     "dev": "node server.js",
     "start": "node server.js"
   },
-  "keywords": ["portfolio", "gsap", "developer-portfolio", "designer-portfolio"],
+  "keywords": [
+    "portfolio",
+    "gsap",
+    "developer-portfolio",
+    "designer-portfolio"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^10.0.10"
+  }
 }
